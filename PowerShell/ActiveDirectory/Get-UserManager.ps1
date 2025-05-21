@@ -60,7 +60,7 @@ function Get-UserManager {
 
 .LINK
    https://patrickhoban.wordpress.com
-   https://github.com/PonchoHobono/Scripts/blob/master/PowerShell/ActiveDirectory/Get-UserManager.ps1
+   https://github.com/ThePatrickHoban/Scripts/blob/master/PowerShell/ActiveDirectory/Get-UserManager.ps1
 #>
 
     [CmdletBinding(
@@ -102,7 +102,6 @@ function Get-UserManager {
             }
             $Object = [pscustomobject]@{
                 UserID = $UserInfo.SamAccountName
-                #Name = $UserInfo.Name
                 Name = $UserInfo.GivenName + " " + $UserInfo.Surname
                 Email = $UserInfo.EmailAddress
                 ManagerID = $ManagerInfo.SamAccountName
